@@ -54,10 +54,9 @@ return (
 			<FootLink href="#"><WhatsApp/>  <P>+44 (0)20 86542 7567</P></FootLink>
 			<FootLink href="#"><Phone/>    <P>+44 (0)20 86542 7567</P></FootLink>
 			<FootLink href="#"><Email/>     <P>customercare@mazglobal.pk</P> </FootLink>
-			<FootLink ><LocationCity  /> <P>Bahria Town Phase |||</P></FootLink>
+			<FootLink ><LocationCity  /> <P> 1963 Street 63 Phase 3 Bahria Town Rawalpindi  </P></FootLink>
 			
-			<FootLink ><p style={{color:'rgba(16, 103, 138, 0.933)',fontSize:'14px',marginTop:'0px',marginLeft:'30px'}}>Street 1963</p></FootLink>
-			
+						
 		</Column>
 		{/* <Column>
 			<Heading>Social Media</Heading>
@@ -98,7 +97,7 @@ return (
 	<span style={{ color: "white",
 				float:'right',
 				marginRight:'20px' }}>
-		Term of Sale Terms | Conditions Privacy | Cookie Disclaimers
+		| Terms & conditions | Privacy | Cookie Disclaimers |
 
 	</span>
 	</div>
@@ -133,17 +132,18 @@ const FootLink=styled.div`
 const Input=styled.input`
  width:200px;
  padding:6px ;
- border-color:rgba(16, 103, 138, 0.933);
+ border: 0.095rem solid lightgrey;
  color:white;
- border-radius:8px;
+ border-radius:4px;
  margin-bottom:4px;
 `
 
  const Button=styled.button`
  width:100px;
  padding:6px ;
+ border: 0.095rem solid lightgrey;
  color:white;
- border-radius:8px;
+ border-radius:4px;
  background-color:rgba(16, 103, 138, 0.933);
 `
 
@@ -152,8 +152,9 @@ const Textarea=styled.textarea`
   width:200px;
  padding:6px ;
  color:white;
- border-color:rgba(16, 103, 138, 0.933);
- border-radius:8px;
+ font-family:'Helvetica';
+ border: 0.095rem solid lightgrey;
+ border-radius:4px;
  margin-bottom:4px;
 `
 

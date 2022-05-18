@@ -43,10 +43,7 @@ const ProductDesp = () => {
   const [togglediv, settoggle] = React.useState(false);
   const toggle = () => setModal(!modal);
   const [slideIndex, setSlideIndex] = useState(0);
-  const [path, setPath] = useState([
-    "https://www.chanceparts.com/Uploads/pro/Wabco-Button-valve-4630220200.464.3-1.jpg",
-    "https://www.ks-international.com/media/catalog/product/cache/d3609febb2c99e7862c5859e894847cb/0/7/0704176-web_1.webp",
-  ]);
+  const [path, setPath] = useState("");
 
   const [icon, setIcon] = useState([
     { name:'S',status:false},{name:'M',status:false},{name:'L',status:false},{name:'XL',status:false},{name:'XS',status:false}]);
@@ -179,19 +176,25 @@ const ProductDesp = () => {
   //   }
   // };
   useEffect(() => {
-    axios.get(`http://localhost:8080/maz-api/products/${id}`)
+    axios.get(`https://mazglobal.co.uk/maz-api/products/${id}`)
     .then(res => {
       console.log('maz',res.data.data)
       setItem(res.data.data)
+      let path1="https://mazglobal.co.uk/maz-api/";
+      console.log("imges",res.data.data.images[0]);
+    //res.data.data.images[0]=path1+res.data.data.images[0];
+    path1=path1+res.data.data.images[0];
+    console.log("path",path1);
+    setPath(path1);
    })
     
-   axios.get(`http://localhost:8080/maz-api/categories`)
+   axios.get(`https://mazglobal.co.uk/maz-api/categories`)
     .then(res => {
       console.log('maz',res.data.data)
       setCat(res.data.data)
    })
    
-   axios.get(`http://localhost:8080/maz-api/vehicles`)
+   axios.get(`https://mazglobal.co.uk/maz-api/vehicles`)
    .then(res => {
      console.log('maz',res.data.data)
      setVehicles(res.data.data)
@@ -242,10 +245,11 @@ const ProductDesp = () => {
     <Navbar/>
     <img src='https://www.chanceparts.com/Uploads/info/60ccb07493e7c.jpg' width='100%'/>
     <Container>
+      
        <SideBar/>
       <ProductShow>
        <ImgDescp>
-       <Image  src={path[0]}  width='250px' height='400px' />
+       <Image  src={path}  width='250px' height='400px' />
        {/* <ImgWrapper slideIndex={slideIndex}>
             {path.map((pa, i) => (
               <Slide bg={item.id} >
@@ -309,8 +313,8 @@ const ProductDesp = () => {
          <Input type='text' placeholder="Name" className="form-control"></Input>
          <Input type='email' placeholder="Email" className="form-control"></Input>
          <Input type='text' placeholder=" Product Name" className="form-control"></Input>
-         <textarea placeholder="Message" style={{background:'whitesmoke',borderRadius:'8px',marginBottom:'20px'}}></textarea>
-         <button type='submit' style={{color:'white',width:'200px',borderRadius:'8px',height:'6vh',background:'rgba(16, 103, 138, 0.933)'}}>
+         <textarea placeholder="Message" style={{background:'whitesmoke',fontFamily:'Helvetica',borderRadius:'4px',marginBottom:'20px',border:'1px solid lightgrey'}}></textarea>
+         <button type='submit' style={{color:'white',width:'200px',borderRadius:'4px',height:'6vh',border:'1px solid lightgrey',background:'rgba(16, 103, 138, 0.933)'}}>
             Submit</button>
          </form>
          </MainDiv>
@@ -318,7 +322,7 @@ const ProductDesp = () => {
 
       
     </Container>
-    <Related/>
+    <Related />
       <Footer /> 
     </>
     
@@ -330,11 +334,12 @@ export default ProductDesp;
 
 const Input= styled.input`
   height:50px;
+  border:0.02rem solid lightgrey;
   padding:6px;
   margin-bottom:20px;
-  border-radius:8px;
+  border-radius:4px;
   background:whitesmoke;
-  border:1px ridge whitesmoke;
+ 
 `;
 const ProductShow = styled.div`
   display: flex;
@@ -455,7 +460,7 @@ const FilterTitle = styled.span`
 
 
 const MainDiv = styled.div`
-  border:2px ridge whitesmoke;
+  border:0.095rem ridge lightgrey;
   width:860px;
   margin-left:auto;
   margin-right:auto;
@@ -528,7 +533,7 @@ const Container = styled.div`
   flex-direction: row;
   flex-wrap:wrap;
   
-  margin-left:180px;
+  
   margin-right: auto;
 `;
 

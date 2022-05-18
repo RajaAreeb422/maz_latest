@@ -151,15 +151,17 @@ const Services = () => {
       <img src='https://www.chanceparts.com/Uploads/info/60ccb07493e7c.jpg' width='100%'/>
       <Container>
        
+       <div style={{ marginLeft:'75px'}}>
       <SideBar/>
-        <div style={{ margin:'55px'}}>
+      </div>
+        <div style={{ marginTop:'55px'}}>
           <Productshow>
             <H >Services</H>
             
 
-          <P>MAIN SERVICES WE CAN PROVIDE</P>
+          <P>Main services we can provide</P>
 
-          <ul style={{ fontWeight:'320',fontFamily:'Montserrat'}}>
+          <ul style={{ fontWeight:'450',fontFamily:'Montserrat',fontSize:'14px'}}>
            <li> Product Sourcing</li> 
            <li>Factory Inspection</li> 
            <li> Shipment Inspection</li> 
@@ -167,12 +169,12 @@ const Services = () => {
              
           </ul>
 
-          <H >WHAT IS OUR ADVANTAGE ?</H>
-          <P style={{fontWeight:'300'}}>
+          <H >What is our advantage?</H>
+          <P >
           Before you work with us, you might have found several China manufacturers on the internet.
            However, you still think you have not got one because you can’t know which will be the right supplier for you.   
           </P>
-          <P style={{fontWeight:'300'}}>
+          <P >
           You might get frustrated because you have been communicating with suppliers in China for months,
            but fail to move forward. You need someone from China who knows Chinese culture and can be “your eyes 
            and ears” to get more accurate information and help make the correct decision on who are the appropriate suppliers.   
@@ -198,13 +200,15 @@ const Title = styled.h1`
 
 const H= styled.p`
   font-weight:400;
-  font-family: Arial, Helvetica, sans-serif;
+  margin-top:10px;
+  margin-bottom:20px;
+  font-family: 'Montserrat', sans-serif;
   font-size:24px;
 `;
 const P= styled.p`
-  font-weight:300;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size:16px;
+  font-weight:400;
+  font-family: 'Montserrat', sans-serif;
+  font-size:14px;
 `;
 const Bar = styled.div`
    display:flex;
@@ -316,22 +320,21 @@ const Productshow = styled.div`
   padding: 20px;
   width:700px;
   margin-top:0px;
-  box-shadow: 0 10px 15px -3px rgba(46, 41, 51, 0.08),
-    0 4px 6px -2px rgba(71, 63, 79, 0.16);
-    border:2px ridge whitesmoke;
-    border-color:whitesmoke;
+  margin-left:100px;
+    border:0.095rem solid lightgrey;
+    
   display: flex;
   
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-between;
+  
 `;
 
 const Container = styled.div`
 display:flex;
 flex-direction:row;
 
-  width: 1100px;
+ 
   margin-left: auto;
   margin-right: auto;
 `;

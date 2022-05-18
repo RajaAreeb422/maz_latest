@@ -117,7 +117,7 @@ const AllProduct = () => {
   ]);
   useEffect(() => {
     
-    axios.get(`http://localhost:8080/maz-api/products`)//api url
+    axios.get(`https://mazglobal.co.uk/maz-api/products`)//api url
     .then(resp =>{//calling url by method GET
           console.log('alll prooo',resp.data.data)
              setSizeProduct(resp.data.data)
@@ -184,7 +184,7 @@ const AllProduct = () => {
       />
       <Container>
         <SideBar/>
-        <div style={{ margin: "55px" }}>
+        <div style={{ marginTop: "55px" }}>
           <Productshow>
             {/* spro.length==0?<> Sorry No items to show</>: */}
             {spro.map((item,i) => (
@@ -311,25 +311,22 @@ const Select = styled.select`
 const Option = styled.option``;
 
 const Productshow = styled.div`
-  padding: 20px;
-  width: 900px;
+  
+  width: 920px;
   margin-top: 0px;
   display: flex;
-  box-shadow: 0 10px 15px -3px rgba(46, 41, 51, 0.08),
-    0 4px 6px -2px rgba(71, 63, 79, 0.16);
-
-  border-color: whitesmoke;
-  border-style: ridge;
+  padding-left:10px;
+  margin-right:100px;
+  border: 0.095rem ridge lightgrey;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  
 `;
 
 const Container = styled.div`
   display: flex;
   flex-direction: row;
-
-  width: 1100px;
+  
   margin-left: auto;
   margin-right: auto;
 `;

@@ -43,7 +43,7 @@ const Slider = () => {
     <div style={{marginBottom:'60px'}}>
     <Carousel>
       <Carousel>
-  <Carousel.Item interval={500}>
+  <Carousel.Item interval={5000}>
     <img
       className="d-block w-100"
       
@@ -52,7 +52,7 @@ const Slider = () => {
     />
     
   </Carousel.Item>
-  <Carousel.Item interval={1000}>
+  <Carousel.Item interval={4000}>
     <img
       className="d-block w-100"
       src="./Maaz copy.jpg"

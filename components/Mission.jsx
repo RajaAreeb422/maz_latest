@@ -9,7 +9,7 @@ import {
   Person,
   PhoneOutlined,
   EmailOutlined,
-  Settings,FlightTakeoff,LocalPolice,Group
+  Settings,FlightTakeoff,LocalPolice,Group,HighQuality,
 } from "@material-ui/icons";
 import { Avatar, Badge } from "@material-ui/core";
 import router, { useRouter } from "next/router";
@@ -33,25 +33,26 @@ const Mission = () => {
   return (
     <div className={nav.mission}>
       <div className={nav.mitem}>
-       <Settings style={{height:'100px',width:'100px'}}/>
+       <Settings style={{height:'70px',width:'70px'}}/>
        <div style={{display:'flex',flexDirection:'column'}}>
-       <p style={{fontWeight:'600',fontSize:'20px',textAlign:'center'}}>OUR MISSION</p>
+       <p style={{fontWeight:'600',fontSize:'20px',marginLeft:'40px'}}>Our Mission</p>
        <p style={{alignItems:'justify-content',marginLeft:'40px',fontWeight:'300'}}>Help middle and small foreign importers to get quality aftermarket products  
            from professional manufacturers and make their purchase activity smoothly in China</p>
       </div>
       </div>
       <div className={nav.mitem}>
-       <LocalPolice style={{height:'100px',width:'100px'}}/>
+      <VerifiedUser style={{height:'70px',width:'70px'}}/>
+       {/* <LocalPolice style={{height:'100px',width:'100px'}}/> */}
        <div style={{display:'flex',flexDirection:'column'}}>
-       <p style={{fontWeight:'600',fontSize:'20px',textAlign:'center'}}>OUR QUALITY</p>
+       <p style={{fontWeight:'600',fontSize:'20px',marginLeft:'40px'}}>Our Quality</p>
        <p style={{alignItems:'justify-content',marginLeft:'40px',fontWeight:'300'}}>
       More than 15 years experience working  together with our suppliers with our strick testing and inspection before shipment, sustain a warranty rate of below 0.5%.</p>
       </div>
       </div>
       <div className={nav.mitem}>
-       <Group style={{height:'100px',width:'100px'}}/>
+       <Group style={{height:'70px',width:'70px'}}/>
        <div style={{display:'flex',flexDirection:'column'}}>
-       <p style={{fontWeight:'600',fontSize:'20px',textAlign:'center'}}>OUR SUPPLIERS</p>
+       <p style={{fontWeight:'600',fontSize:'20px',marginLeft:'40px'}}>Our Suppliers</p>
        <p style={{alignItems:'justify-content',marginLeft:'40px',fontWeight:'300'}}>Help middle and small foreign importers to get quality aftermarket products  
            from professional manufacturers and make their purchase activity smoothly in China </p>
       </div>

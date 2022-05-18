@@ -40,7 +40,7 @@ const AboutUs= () => {
            we are also growing up with them. We save a wide and close purchase sources after years of
             cooperation with many truck parts manufacturers.We continuously strive to source new products 
             of high quality and extremely competitive prices to satisfy our wide range of customers throughout all around the world.</p>
-       <button style={{height:'40px',width:'200px',marginTop:'40px',marginLeft:'10px',background:'white',borderRadius:'4px',borderStyle:'ridge'}}>READ MORE {'>>'}</button> 
+       <button style={{height:'40px',width:'200px',marginTop:'40px',marginLeft:'10px',background:'white',borderRadius:'4px',border:'0.095rem ridge lightgrey'}}><strong>READ MORE {'>>'}</strong></button> 
       </div>
       </div>
       

@@ -73,7 +73,7 @@ const Index = () => {
   const { id } = router.query;
   useEffect(() => {
 
-    axios.get(`http://localhost:8080/maz-api/products/category/${id}`)//api url
+    axios.get(`https://mazglobal.co.uk/maz-api/products/category/${id}`)//api url
        .then(resp =>{//calling url by method GET
              console.log("productz",resp.data.data)
              setItems(resp.data.data)
@@ -140,11 +140,11 @@ const Index = () => {
       <SideBar/>
         
     
-        <div style={{ margin:'70px'}}>
+        <div style={{ marginTop:'55px'}}>
           <Productshow>
             {/* spro.length==0?<> Sorry No items to show</>: */}
             {spro.map((item,i) => (
-              <SingleProduct item={item} img={dumy[i].img} key={item.id} />
+              <SingleProduct item={item} key={item.id} />
             ))}
           </Productshow>
         </div>
@@ -270,21 +270,20 @@ const Select = styled.select`
 const Option = styled.option``;
 
 const Productshow = styled.div`
-  padding: 20px;
-  width:900px;
-  margin-top:0px;
+  padding: 20px ;
+  width:940px;
   display: flex;
-  border:1px solid grey;
+  border:0.095rem solid lightgrey;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  
 `;
 
 const Container = styled.div`
 display:flex;
 flex-direction:row;
 
-  width: 1100px;
+  
   margin-left: auto;
   margin-right: auto;
 `;

@@ -26,7 +26,7 @@ const Navbar = () => {
   useEffect(() => {
     let list=[];
     let list1=[]
-    axios.get(`http://localhost:8080/maz-api/categories`)
+    axios.get(`https://mazglobal.co.uk/maz-api/categories`)
     .then(res => {
       console.log('maz',res.data.data)
       
@@ -36,7 +36,7 @@ const Navbar = () => {
         list1.push({
           id:lt.id,
           title:lt.name,
-          submenu:[]
+          
         })
       }
       else{
@@ -70,7 +70,7 @@ const Navbar = () => {
       console.log("list",list1)
     }).catch(err=>console.log(err))
     menuItems.map(it=>{
-      if(it.title=='PRODUCTS')
+      if(it.title=='Products')
       {
         it.submenu=list1
       }
@@ -85,7 +85,7 @@ const Navbar = () => {
   <nav style={{display:'flex',flexDirection:'row',height:'105px'}} className={nav.stick}>
   <Link href="/" as={`/`}>
        <div style={{marginLeft:'160px',marginTop:'-6px'}}>
-        <Image  height='120px' width='180px' src='/Maz Global Logo-02.png'/>
+        <Image style={{cursor:'pointer'}}  height='120px' width='180px' src='/Maz Global Logo-02.png'/>
         </div>
         </Link>
    <ul className="menus" style={{marginLeft:'auto'}}>

@@ -8,11 +8,11 @@ import { useEffect, useState } from "react";
 import SingleProduct from "../components/SingleProduct";
 import { HomeOutlined, Category } from "@material-ui/icons";
 import Navbar from "../components/Navbar";
-<<<<<<< HEAD
+
 import SideBar from "../components/SideBar";
-=======
+
 import Backtotop from "../components/Backtotop";
->>>>>>> 81ba3575d790f85329e26ff7703be971a8db79c6
+
 
 const Faq = () => {
   useEffect(() => {
@@ -27,15 +27,17 @@ const Faq = () => {
         width="100%"
       />
       <Container>
+        <div style={{ marginLeft: "72px" }}>
       <SideBar/>
-        <div style={{ margin: "70px" }}>
+      </div>
+        <div style={{ margin: "62px" }}>
           <Productshow>
             <P
               style={{
                 fontWeight: "300",
                 fontSize: "28px",
                 marginTop: "-10px",
-                fontFamily: "Halvatica",
+                fontFamily: "Montserrat",
               }}
             >
               F.A.Q
@@ -44,7 +46,7 @@ const Faq = () => {
             <P style={{ fontWeight: "bold" }}>
               1- What if you don't have the part I'm looking for?
             </P>
-            <P style={{ marginTop: "-10px" }}>
+            <P >
               It's not an issue if we don't have the part you require. We search
               thousands of salvage yards for vehicle parts using an inventory
               locating system. We can utilize this system to look for the part
@@ -57,7 +59,7 @@ const Faq = () => {
             <P style={{ fontWeight: "bold" }}>
               2- Are you able to provide parts for both new and old trucks?
             </P>
-            <P style={{ marginTop: "-10px" }}>
+            <P >
               Yes, our junkyard has a large variety of trucks. We also have a
               large selection of vintage vehicle parts.
             </P>
@@ -65,14 +67,14 @@ const Faq = () => {
             <P style={{ fontWeight: "bold" }}>
               3- Do you test all of your products before they are delivered?
             </P>
-            <P style={{ marginTop: "-10px" }}>
+            <P >
               Yes, we test everything before we ship it.
             </P>
 
             <P style={{ fontWeight: "bold" }}>
               4- what is your estimated delivery time?{" "}
             </P>
-            <P style={{ marginTop: "-10px" }}>
+            <P >
               After receiving your advance payment, it usually takes 30 to 60
               days. The delivery time is determined by the goods and amount of
               your order.
@@ -80,7 +82,7 @@ const Faq = () => {
             <P style={{ fontWeight: "bold" }}>
               5- What are the most common vehicle parts to be replaced?
             </P>
-            <P style={{ marginTop: "-10px" }}>
+            <P >
               Tires, clutches, and brakes are the most often replaced components
               on heavy-duty vehicles, which should come as no surprise given
               that they are subjected to the most wear and tear.
@@ -89,7 +91,7 @@ const Faq = () => {
               6- What's the difference between original equipment manufacturer
               (OEM) and aftermarket parts?{" "}
             </P>
-            <P style={{ marginTop: "-10px" }}>
+            <P >
               OEM stands for Original Equipment Maker, meaning these parts are
               produced by the car's manufacturer. Non-manufacturer firms, on the
               other hand, design aftermarket parts. When using aftermarket car
@@ -100,7 +102,7 @@ const Faq = () => {
             <P style={{ fontWeight: "bold" }}>
               7- When I'm done with my old parts, what should I do with them?
             </P>
-            <P style={{ marginTop: "-10px" }}>
+            <P >
               It's not as simple as tossing old components in the garbage. If
               you need to get rid of outdated or damaged parts, you can sell
               them to a parts dealer or shop, sell them for scrap metal, or
@@ -110,7 +112,7 @@ const Faq = () => {
             <P style={{ fontWeight: "bold" }}>
               8- Why is it necessary to analyze components?{" "}
             </P>
-            <P style={{ marginTop: "-10px" }}>
+            <P >
               To ensure that the material, as well as the join, can withstand
               the forces in such an impact, it is critical to determine the
               material's strength. Other fabrics in automobiles are put through
@@ -119,14 +121,14 @@ const Faq = () => {
             <P style={{ fontWeight: "bold" }}>
             9-	Is there a warranty on auto parts?{" "}
             </P>
-            <P style={{ marginTop: "-10px" }}>
+            <P >
             Unless otherwise noted on your receipt, we offer a one-year part replacement warranty.{" "}
             </P>
           </Productshow>
         </div>
       </Container>
       <Footer />
-      <Backtotop/>
+      {/* <Backtotop/> */}
     </>
   );
 };
@@ -139,8 +141,9 @@ const Title = styled.h1`
 `;
 
 const P = styled.p`
-  font-weight: 320;
-  font-family:  Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  margin-top:10px;
+  font-family:  'Montserrat', sans-serif;
 `;
 const Bar = styled.div`
   display: flex;
@@ -262,7 +265,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
 
-  width: 1100px;
+  
   margin-left: auto;
   margin-right: auto;
 `;

@@ -24,8 +24,10 @@ return(
     <Navbar/>
     <img src='https://www.chanceparts.com/Uploads/info/60ccb07493e7c.jpg' width='100%'/>
       <Container>
+        <div style={{marginLeft:'72px'}}>
         <SideBar/>
-          <div style={{ margin:'70px'}}>
+        </div>
+          <div style={{ margin:'55px'}}>
           <Productshow>
           <Div>
               
@@ -205,7 +207,7 @@ const Productshow = styled.div`
   
   width:500px;
   
-  box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+  border:0.095rem solid lightgrey;
   margin-top:0px;
   display: flex;
   
@@ -219,7 +221,7 @@ const Container = styled.div`
 display:flex;
 flex-direction:row;
 
-  width: 1100px;
+  
   margin-left: auto;
   margin-right: auto;
 `;

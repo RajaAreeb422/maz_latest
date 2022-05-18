@@ -1,15 +1,15 @@
 export const menuItems = [
     {
       id:1,
-      title: "HOME",
+      title: "Home",
     },
     {
-        title: "about",
+        title: "About",
         
       },
     {
       id:2,
-      title: "PRODUCTS",
+      title: "Products",
       submenu: [
         
         
@@ -18,17 +18,17 @@ export const menuItems = [
    
     {
       id:3,
-        title: "services",
+        title: "Services",
         
       },
       {
         id:4,
-        title: "faq",
+        title: "Faq",
         
       },
       {
         id:5,
-        title: "contact",
+        title: "Contact",
         
       },
   ];

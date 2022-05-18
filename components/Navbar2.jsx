@@ -141,12 +141,12 @@ const Navbar2 = () => {
             info@mazglobal.com
           </p>
           <TextField
-          style={{marginLeft:'auto',marginRight:'200px',paddingLeft:'8px',}}
+          style={{marginLeft:'auto',marginRight:'200px',paddingLeft:'8px', fontFamily: "'Montserrat', sans-serif"}}
           className={nav.Search}
            
          
             //label="   Enter Chance No.OEM No"
-            placeholder="Enter Chance No.OEM No"
+            placeholder="Enter Part No"
             InputProps={{
               endAdornment: (
                 <InputAdornment>

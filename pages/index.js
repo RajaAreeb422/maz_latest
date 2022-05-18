@@ -9,12 +9,21 @@ import FeaturedProducts from '../components/FeaturesProducts/FeaturedProducts'
 import AboutUs from '../components/AboutUs'
 import CustomNav from '../components/CustomNav'
 import Navbar from '../components/Navbar'
-import Backtotop from '../components/Backtotop'
+// import Backtotop from '../components/Backtotop'
 
 export default function Home() {
 
   return (
     <>
+     <Head>
+        <title>Home App</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
     <Navbar2/>
     <Navbar/>
     
@@ -28,7 +37,7 @@ export default function Home() {
     {/* <h2 style={{fontWeight:'500'}}>COMPANY OVERVIEW</h2> */}
     </div>
     <Footer/>  
-    <Backtotop/>
+    {/* <Backtotop/> */}
     </>
       )
 }

@@ -1,7 +1,7 @@
 import { Add, PanToolSharp, Remove } from "@material-ui/icons";
 import styled from "styled-components";
 
-import { ArrowLeftOutlined, ArrowRightOutlined ,Category,LocationCity} from "@material-ui/icons";
+import { ArrowLeftOutlined, ArrowRightOutlined ,Category,LocationCity,CropSquare,List,SearchOutlined} from "@material-ui/icons";
 import { useEffect, useState } from "react";
 
 import { useRouter } from "next/router";
@@ -16,7 +16,7 @@ import axios from "axios";
 // toast.configure()
 import { toast, ToastContainer } from 'react-nextjs-toast';
 import Link from "next/link";
-
+import Head from "next/head";
 import DataGrid from 'react-data-grid';
 const SideBar = () => {
 
@@ -48,13 +48,13 @@ const SideBar = () => {
 //       setItem(res.data.data)
 //    })
     
-   axios.get(`http://localhost:8080/maz-api/categories`)
+   axios.get(`https://mazglobal.co.uk/maz-api/categories`)
     .then(res => {
       console.log('maz',res.data.data)
       setCat(res.data.data)
    })
    
-   axios.get(`http://localhost:8080/maz-api/vehicles`)
+   axios.get(`https://mazglobal.co.uk/maz-api/vehicles`)
    .then(res => {
      console.log('maz',res.data.data)
      setVehicles(res.data.data)
@@ -78,7 +78,7 @@ const search=()=>{
           });
     }
     else{
-        axios.get(`http://localhost:8080/maz-api/products/search`,
+        axios.get(`https://mazglobal.co.uk/maz-api/products/search`,
         {
         params: {
             part_no: state.part_no,
@@ -95,8 +95,16 @@ const search=()=>{
 
   
   return (
-    <>
-    
+    <div style={{marginLeft:'170px',paddingRight:'20px'}}>
+       <Head>
+        <title>SideBar</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
      
     <ToastContainer align={'right'} position={'bottom'} />   
       <div style={{ display: "flex", flexDirection: "column" }}>
@@ -110,18 +118,18 @@ const search=()=>{
                     height: "50px",
                   }}
                 >
-                  <Category style={{ color: "white", marginTop: "8px" }} />
+                  <List style={{ color: "white", marginTop: "8px",fontSize:'32px' }} />
                 </div>
-                <FilterTitle>PRODUCT CATEGORIES</FilterTitle>
+                <FilterTitle>Product Categories</FilterTitle>
               </Bar>
-              <hr width="245px" style={{ marginTop: "-2px" }} />
+              <hr width="247px" style={{ marginTop: "-2px" }} />
               {cat.map(ca=>(
                 <Link href="/category/[id]" as={`/category/${ca.id}`}>
-                       <FilterText>{">"} {ca.name}</FilterText>
+                       <FilterText><CropSquare style={{fontSize:'5px',backgroundColor:'black'}}/> {ca.name}</FilterText>
                        </Link>
               ))}
             
-              <hr width="200px" />
+              
             </Filter>
           </LeftBar>
 
@@ -135,11 +143,11 @@ const search=()=>{
                     height: "50px",
                   }}
                 >
-                  <Category style={{ color: "white", marginTop: "8px" }} />
+                  <SearchOutlined style={{ color: "white", marginTop: "8px" ,fontSize:'32px'}} />
                 </div>
-                <FilterTitle>SEARCH</FilterTitle>
+                <FilterTitle>Search</FilterTitle>
               </Bar>
-              <hr width="245px" style={{ marginTop: "-2px" }} />
+              <hr width="247px" style={{ marginTop: "-2px" }} />
               <FilterText>Product Search</FilterText>
               <input
                 type="text"
@@ -149,10 +157,12 @@ const search=()=>{
                 onChange={handleChange('part_no')}
                 value={state.part_no}
                 style={{
-                  borderRadius: "8px",
+                  borderRadius: "4px",
+                  border:'0.095rem solid lightgrey',
                   background: "whitesmoke",
                   width: "220px",
                   height: "40px",
+                  fontFamily: 'Montserrat, sans-serif',
                   padding: "8px",
                   marginLeft: "10px",
                   marginTop: "10px",
@@ -168,6 +178,8 @@ const search=()=>{
                   borderRadius: "8px",
                   background: "whitesmoke",
                   width: "220px",
+                  fontFamily: 'Montserrat, sans-serif',
+                  borderRadius: "4px",
                   height: "40px",
                   padding: "8px",
                   marginLeft: "10px",
@@ -190,6 +202,9 @@ const search=()=>{
                 style={{
                   borderRadius: "8px",
                   background: "whitesmoke",
+                  borderRadius: "4px",
+                  fontFamily: 'Montserrat, sans-serif',
+                  
                   width: "220px",
                   height: "40px",
                   padding: "8px",
@@ -209,6 +224,8 @@ const search=()=>{
                   marginBottom: "10px",
                   height: "40px",
                   width: "100px",
+                  borderRadius: "4px",
+                  border:'1px solid lightgrey',
                   marginLeft: "10px",
                   marginRight: "auto",
                   marginTop: "20px",
@@ -226,7 +243,7 @@ const search=()=>{
       
 
     
-    </>
+    </div>
     
   );
 };
@@ -259,7 +276,7 @@ const ImgDescp = styled.div`
 
 const Bar = styled.div`
   display: flex;
-  width: 245px;
+  width: 247px;
   flex-direction: row;
   background-color: whitesmoke;
   //border-style:groove;
@@ -305,25 +322,23 @@ const Images = styled.div`
   //height:40px;
 `;
 const LeftBar = styled.div`
-  margin-left: 30px;
+  
   margin-top: 55px;
   width: 250px;
 
-  border-color: whitesmoke;
-  border-style: ridge;
+  border: 0.095rem solid lightgrey;
   // border-style:groove;
-  box-shadow: 0 2px 2px rgb(11 25 28 / 10%);
+
 `;
 
 const SearchBar = styled.div`
-  margin-left: 30px;
+  
   margin-top: 55px;
   width: 250px;
   margin-bottom: 40px;
-  border-color: whitesmoke;
-  border-style: ridge;
+  border: 0.095rem solid lightgrey;
   // border-style:groove;
-  box-shadow: 0 2px 2px rgb(11 25 28 / 10%);
+  
 `;
 
 const Right = styled.div`
@@ -331,11 +346,11 @@ const Right = styled.div`
 `;
 
 const FilterText = styled.span`
-  font-size: 16px;
+  font-size: 14px;
   cursor:pointer;
   padding: 8px;
-  font-weight:300;
-  font-family:Montserrat;
+  color:grey;
+  font-family: 'Montserrat', sans-serif;
   margin-left: 10px;
 `;
 const FilterHomeText = styled.span`
@@ -350,9 +365,10 @@ const SortText = styled.span`
 `;
 const FilterTitle = styled.span`
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 700;
+  margin-top:6px;
   padding: 9px;
-  font-family:Helvatica;
+  font-family: 'Montserrat', sans-serif;
   background-color: whitesmoke;
 `;
 

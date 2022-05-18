@@ -7,11 +7,19 @@ import styled from "styled-components";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-const SingleProduct = ({ item,img }) => {
+const SingleProduct = ({ item}) => {
   const [path, setPath] = useState("");
 
-  // const [items, setItems] = useState([])
-  useEffect(() => {}, []);
+ 
+  useEffect(() => {
+    let path1="https://mazglobal.co.uk/maz-api/";
+    item.path=path+item.path;
+    path1=path1+item.path;
+    console.log("path",path1);
+    setPath(path1);
+    
+
+  }, []);
   return (
     <Link href="/productdescp/[id]" as={`/productdescp/${item.id}`}>
       <Container>
@@ -21,7 +29,7 @@ const SingleProduct = ({ item,img }) => {
         {/* <h5>{item.name}</h5>
         <p>{item.part}</p> */}
 
-        <Image src={img}  width='170px'/>
+        <Image src={path}  width='170px'/>
         <p style={{textAlign:'center',fontSize:'13px',fontWeight:'200'}}>{item.name}</p>
         {/* <p> Sku : {item.sku}</p>
         <p>Price: {item.price}</p>
@@ -76,9 +84,9 @@ const Container = styled.div`
   
   width:200px;
   cursor:pointer;
-  margin-top:20px;
-  padding: 10px;
-  border: 0.09rem ridge whitesmoke;
+  margin:10px;
+  
+  border: 0.095rem ridge lightgrey;
   
   position: relative;
   &:hover ${Info} {
@@ -105,6 +113,7 @@ const PriceCol = styled.div`
 const Image = styled.img`
   height: 200px;
   align-items: center;
+  margin:12px;
   //width:200px;
 `;
 

@@ -152,10 +152,12 @@ const About = () => {
         width="100%"
       />
       <Container>
+        <div style={{marginLeft:'50px'}}>
       <SideBar/>
-        <div style={{ margin: "55px" }}>
+      </div>
+        <div style={{ marginTop: "55px" }}>
           <Productshow>
-            <h2 style={{fontFamily:'Helvatica'}}>About Us</h2>
+            <h2 >About Us</h2>
             <P>
               MAZ Global is a team of people working in truck spare parts more
               than 15 years. With the development truck parts industry and
@@ -186,7 +188,7 @@ const About = () => {
             </P>
 
             <P>Highlighed Products:</P>
-            <ul style={{ fontWeight: "320",fontFamily:'Montserrat' }}>
+            <ul style={{ fontFamily:'Montserrat' }}>
               <li> Air Brake Systems</li>
               <li> Clutch</li>
               <li> Wheel Brake</li>
@@ -196,7 +198,7 @@ const About = () => {
 
             <P>Main Services</P>
 
-            <ul style={{ fontWeight: "320",fontFamily:'Montserrat' }}>
+            <ul style={{ fontFamily:'Montserrat' }}>
               <li> Products Sourcing</li>
               <li>Factory Inspection</li>
               <li> Shipment Insepection</li>
@@ -218,8 +220,8 @@ const Title = styled.h1`
 `;
 
 const P = styled.p`
-  
-  font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    margin-top:20px;
 `;
 const Bar = styled.div`
   display: flex;
@@ -328,13 +330,10 @@ const Option = styled.option``;
 const Productshow = styled.div`
   padding: 20px;
   width: 700px;
-  margin-top: 0px;
-  box-shadow: 0 10px 15px -3px rgba(46, 41, 51, 0.08),
-    0 4px 6px -2px rgba(71, 63, 79, 0.16);
-  border-style: groove;
-  border-color: whitesmoke;
+  margin-bottom: 50px;
+  border:0.095rem solid lightgrey;
   display: flex;
-  border: 1px ridge whitesmoke;
+  margin-left:150px;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -343,8 +342,6 @@ const Productshow = styled.div`
 const Container = styled.div`
   display: flex;
   flex-direction: row;
-
-  width: 1100px;
   margin-left: auto;
   margin-right: auto;
 `;
