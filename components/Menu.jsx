@@ -50,7 +50,7 @@ const Menu =({items,depthLevel}) => {
 >
   {items.submenu ? (
     <>
-    <Link href={`/${items.title}`} as={`/${items.title}`}>
+    <Link href={`/${items.title.toLowerCase()}`} as={`/${items.title.toLowerCase()}`}>
     {/* <Link href='/category/[id]' as={`/category/${items.id}`}> */}
       <button
         type="button"
@@ -75,8 +75,8 @@ const Menu =({items,depthLevel}) => {
       <>
       {
            items.title=='Home'||items.title=='HOME'?
-           <Link href='/'>{items.title.toUpperCase()}</Link>:
-           <Link href={`/${items.title}`} as={`/${items.title}`}>{items.title}</Link>
+           <Link href='/'>{items.title.toLowerCase()}</Link>:
+           <Link href={`/${items.title.toLowerCase()}`} as={`/${items.title.toLowerCase()}`}>{items.title}</Link>
       }
     
     </>
