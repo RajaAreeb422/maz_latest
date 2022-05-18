@@ -44,13 +44,13 @@ const Faq = () => {
             </P>
 
             <P style={{ fontWeight: "bold" }}>
-              1- What if you don't have the part I'm looking for?
+              1- What if you don not have the part I am looking for?
             </P>
             <P >
-              It's not an issue if we don't have the part you require. We search
+              It iss not an issue if we don not have the part you require. We search
               thousands of salvage yards for vehicle parts using an inventory
               locating system. We can utilize this system to look for the part
-              you're looking for, or we can send you to another junkyard that
+              you are looking for, or we can send you to another junkyard that
               might have it. This service is provided as a convenience to our
               customers, and it is one of the many characteristics that
               distinguish us from others.
@@ -88,22 +88,22 @@ const Faq = () => {
               that they are subjected to the most wear and tear.
             </P> 
             <P style={{ fontWeight: "bold" }}>
-              6- What's the difference between original equipment manufacturer
+              6- What is the difference between original equipment manufacturer
               (OEM) and aftermarket parts?{" "}
             </P>
             <P >
               OEM stands for Original Equipment Maker, meaning these parts are
-              produced by the car's manufacturer. Non-manufacturer firms, on the
+              produced by the cars manufacturer. Non-manufacturer firms, on the
               other hand, design aftermarket parts. When using aftermarket car
-              parts, make sure they're compatible with your vehicle and that
-              they don't void any warranties or lease agreements you may have on
+              parts, make sure they are compatible with your vehicle and that
+              they don not void any warranties or lease agreements you may have on
               the vehicle.
             </P>
             <P style={{ fontWeight: "bold" }}>
-              7- When I'm done with my old parts, what should I do with them?
+              7- When I am done with my old parts, what should I do with them?
             </P>
             <P >
-              It's not as simple as tossing old components in the garbage. If
+              It is not as simple as tossing old components in the garbage. If
               you need to get rid of outdated or damaged parts, you can sell
               them to a parts dealer or shop, sell them for scrap metal, or
               recycle them if all else fails.
@@ -115,7 +115,7 @@ const Faq = () => {
             <P >
               To ensure that the material, as well as the join, can withstand
               the forces in such an impact, it is critical to determine the
-              material's strength. Other fabrics in automobiles are put through
+              material is strength. Other fabrics in automobiles are put through
               rigorous testing to assure their long-term durability.{" "}
             </P>
             <P style={{ fontWeight: "bold" }}>
