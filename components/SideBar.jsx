@@ -96,7 +96,7 @@ const search=()=>{
   
   return (
     <div style={{marginLeft:'170px',paddingRight:'20px'}}>
-       <Head>
+       {/* <Head>
         <title>SideBar</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -104,7 +104,7 @@ const search=()=>{
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap"
           rel="stylesheet"
         />
-      </Head>
+      </Head> */}
      
     <ToastContainer align={'right'} position={'bottom'} />   
       <div style={{ display: "flex", flexDirection: "column" }}>
@@ -124,7 +124,7 @@ const search=()=>{
               </Bar>
               <hr width="247px" style={{ marginTop: "-2px" }} />
               {cat.map(ca=>(
-                <Link href="/category/[id]" as={`/category/${ca.id}`}>
+                <Link key={ca.id} href="/category/[id]" as={`/category/${ca.id}`}>
                        <FilterText><CropSquare style={{fontSize:'5px',backgroundColor:'black'}}/> {ca.name}</FilterText>
                        </Link>
               ))}
@@ -187,7 +187,7 @@ const search=()=>{
                 }}
               >
                  {cat.map(ca=>(
-                   <option value={ca.id}>{ca.name}</option>
+                   <option key={ca.id} value={ca.id}>{ca.name}</option>
                 ))}
                 <option value=''>Select Category</option>
               
@@ -213,7 +213,7 @@ const search=()=>{
                 }}
               >
                 {vehicle.map(vh=>(
-                   <option value={vh.id}>{vh.name}</option>
+                   <option key={vh.id} value={vh.id}>{vh.name}</option>
                 ))}
                 <option value=''>Select Vehicle</option>
                 
